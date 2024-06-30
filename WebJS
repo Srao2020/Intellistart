@@ -12,7 +12,7 @@ async function askGPT() {
             body: JSON.stringify({ prompt: userInput })
         });
         const data = await response.json();
-        displayMessage(data.choices[0].text, 'gpt'); // Update this based on the actual response structure
+        displayMessage(data.response, 'gpt'); // Update this based on the actual response structure
     } catch (error) {
         displayMessage('Error: ' + error.message, 'gpt');
     }
